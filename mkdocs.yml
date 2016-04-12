@@ -1,0 +1,30 @@
+site_name: AlaSQL docs TEST SITE
+
+#theme: spacelab 
+#theme: bootstrap 
+theme: readthedocs 
+
+#theme_dir: 'theme'
+
+site_favicon: favicon.png
+
+repo_url: https://github.com/agershun/alasql 
+
+site_description: Documentation for the javscript SQL database AlaSQL
+
+site_author: Mathias Rangel Wulff <m@rawu.dk>
+
+extra_css:
+    - css/extra.css
+
+markdown_extensions:
+    - markdown_include.include:
+        base_path: "./docs/"
+#   - markdown_github
+
+pages:
+    - 'Introduction': 'index.md'
+    - 'SQL': 'SQL.md'
+    - 'Javasciprt': 'Javascript.md'
+    - 'Bonus': 
+      - 'Javascript.md'
