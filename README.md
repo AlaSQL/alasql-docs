@@ -1,4 +1,4 @@
-# Alasql documentation
+# AlaSQL documentation
 
 Lets make the documentation better. 
 
