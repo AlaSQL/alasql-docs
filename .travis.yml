@@ -1,10 +1,4 @@
-# whitelisted branches
-branches:
-  only:
-    - docs
-    
 language: python
-
 python:
   - "2.7"
   
@@ -19,10 +13,5 @@ deploy:
   provider: surge
   project: ./site/
   skip_cleanup: true
-  on:
-    branch: docs
-  edge:
-    source: mathiasrw/dpl
-    branch: master
 
 
