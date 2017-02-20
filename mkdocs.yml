@@ -20,11 +20,12 @@ extra_css:
 markdown_extensions:
     - markdown_include.include:
         base_path: "./docs/"
-#   - markdown_github
+    - markdown_github
 
 pages:
     - 'Introduction': 'index.md'
     - 'SQL': 'SQL.md'
     - 'Javasciprt': 'Javascript.md'
     - 'Bonus': 
+      - 'Javascript.md'
       - 'Javascript.md'
