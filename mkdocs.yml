@@ -26,6 +26,4 @@ pages:
     - 'Introduction': 'index.md'
     - 'SQL': 'SQL.md'
     - 'Javasciprt': 'Javascript.md'
-    - 'Bonus': 
-      - 'Javascript.md'
-      - 'Javascript.md'
+    - 'Bulk wiki': 'wiki/_.md'
