@@ -3,4 +3,4 @@ node_modules/
 site/
 npm-debug.log
 */.git
-docs/wiki/
+docs/wiki*

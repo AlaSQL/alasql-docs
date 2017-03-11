@@ -20,10 +20,10 @@ extra_css:
 markdown_extensions:
     - markdown_include.include:
         base_path: "./docs/"
-    - markdown_github
+#   - markdown_github # was working - but does not any more. 
 
 pages:
     - 'Introduction': 'index.md'
     - 'SQL': 'SQL.md'
     - 'Javasciprt': 'Javascript.md'
-    - 'Bulk wiki': 'wiki/_.md'
+    - 'Bulk wiki': './wiki/_.md'
