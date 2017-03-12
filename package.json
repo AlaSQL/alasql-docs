@@ -8,7 +8,7 @@
     "get-wiki": "rm -fr ./docs/wiki && git --git-dir=/dev/null clone --depth 1 https://github.com/agershun/alasql.wiki ./docs/wiki && sh clean-wiki.sh",
     "build": "mkdocs build --clean",
     "publish": "surge ./site/",
-    "deploy": "npm run get-wiki && npm run build && npm run publish"
+    "deploy": "npm run get-wiki && npm run build && npm run publish",
   },
   "main": "",
   "repository": {
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/agershun/alasql/issues"
   },
-  "homepage": "https://github.com/agershun/alasql#readme"
+  "homepage": "https://github.com/agershun/alasql#readme",
+  "devDependencies": {
+    "shx": "^0.2.2"
+  }
 }
