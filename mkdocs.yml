@@ -24,6 +24,6 @@ markdown_extensions:
 
 pages:
     - 'Introduction': 'index.md'
-    - 'SQL': 'SQL.md'
-    - 'Javasciprt': 'Javascript.md'
-    - 'Bulk wiki': './wiki/_.md'
+    - 'Seen fom SQL': 'sql.md'
+    - 'Seen from Javasciprt': 'js.md'
+    - 'Keywords': 'keywords.msd'

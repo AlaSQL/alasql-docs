@@ -6,7 +6,9 @@
 
 # AlaSQL documentation
 
-## Please note this website is only here to test different ways of presenting the yet nonexisting documentation. The site can be edited from https://github.com/AlaSQL/alasql-docs/edit/master/docs/
+**Please note this website is only here to test different ways of presenting the yet nonexisting documentation!**
+
+_The site can be edited from https://github.com/AlaSQL/alasql-docs/_
 
 _( [à la](http://en.wiktionary.org/wiki/%C3%A0_la) [SQL](http://en.wikipedia.org/wiki/SQL) ) [ælæ ɛskju:ɛl]_ - AlaSQL is an open source SQL database for Javascript with a strong focus on query speed and datasource flexibility for relational data, schemaless data, and graph data. [Read more about the library in the readme](https://github.com/agershun/alasql/wiki/readme)
 
@@ -14,21 +16,19 @@ Please note that the AlaSQL project is very young and still in active developmen
 
 All contributions are much welcome and greatly appreciated. The project has never received any funding and is based on unpaid voluntary work: [We really (really) love pull requests](https://github.com/agershun/alasql/blob/develop/CONTRIBUTING.md). 
 
-{!https://raw.githubusercontent.com/wiki/agershun/alasql/readme.md!}
-123
-{!SQL.md!}
-
 ## Documentation
 
-This documentation is devided into 4 sections
+This documentation is devided into 4 sections:
 
 * Overview (what you are reading right now)
-* SQL related 
-* Javascript related 
-* Bonus areas
+* AlaSQL seen from a SQL point of view 
+* AlaSQL seen from a javascript point of view 
+* Documentation of keywords
 
 As AlaSQL merge aspects of Javascript and SQL some features will be mentioned en both sections.
 
+
+## Short intro
 
 ## How to install
 
@@ -43,12 +43,10 @@ npm install -g alasql          # command line
 For the browser: include [alasql.min.js](http://cdn.jsdelivr.net/alasql/latest/alasql.min.js)  
 
 ```html
-<script src="http://cdn.jsdelivr.net/alasql/0.2/alasql.min.js"></script>
+<script src="http://cdn.jsdelivr.net/alasql/0.3/alasql.min.js"></script>
 ```
 
-## Short introduction
-
-
+## How to use
 
 
 ```js
@@ -90,7 +88,7 @@ console.log(res); // [{"a":1,"b":40},{"a":2,"b":20}]
 
 ```js
 // C) Promise notation + read from file example
-alasql.promise('SELECT * FROM XLS("mydata.xls") WHERE lastname LIKE "A%" and city = "London" GROUP BY name ')
+alasql(['SELECT * FROM XLS("mydata.xls") WHERE lastname LIKE "A%" and city = "London" GROUP BY name '])
       .then(function(res){
            console.log(res); // output depends on mydata.xls
       }).catch(function(err){
@@ -451,10 +449,9 @@ Warning: Alaserver is not multi-thread, not concurrent, and not secured.
 
 ## Limitations
 
-Please be aware that AlaSQL ~~may~~ have [bugs](https://github.com/agershun/alasql/labels/Bug). Besides the bugs there are a number of limitations
+Please be aware that AlaSQL ~~may~~ have [bugs](https://github.com/agershun/alasql/labels/Bug). Besides the bugs there are a number of known limitations:
 
 0. AlaSQL has a (long) list of keywords that must be escaped if used for column names. When selecting a field named `key` please write ``` SELECT `key` FROM ... ``` instead. This is also the case for words like ``` `value` ```, ``` `read` ```, ``` `count` ```, ``` `by` ```, ``` `top` ```, ``` `path` ```, ``` `deleted` ```, ``` `work` ``` and ``` `offset` ```. Please consult the [full list of keywords](https://github.com/agershun/alasql/wiki/AlaSQL-Keywords).
-
 
 0. It is Ok with select for 1000000 records or to join two tables by 10000 records in each (You can use streaming functions to work with longer datasources - see [test/test143.js](test/test143.js)) but be aware that the workload is multiplied so selecting from more than 8 tables with just 100 rows in each will show bad performance. This is one of our top priorities to make better.
 
