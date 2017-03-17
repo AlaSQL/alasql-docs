@@ -4,24 +4,21 @@
   "description": "Documentation for AlaSQL",
   "scripts": {
     "test": "echo 'No test specified...'",
-    "install": "pip install mkdocs && pip install markdown-include && npm install -g surge",
+    "install": "pip install mkdocs && pip install markdown-include && npm install -g rexreplace surge",
     "get-wiki": "rm -fr ./docs/wiki && git --git-dir=/dev/null clone --depth 1 https://github.com/agershun/alasql.wiki ./docs/wiki && sh clean-wiki.sh",
     "build": "mkdocs build --clean",
     "publish": "surge ./site/",
-    "deploy": "npm run get-wiki && npm run build && npm run publish",
+    "deploy": "npm run get-wiki && npm run build && npm run publish"
   },
   "main": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/agershun/alasql.git"
+    "url": "git+https://github.com/AlaSQL/alasql-docs.git"
   },
-  "author": "M. Rangel Wulff",
+  "author": "Mathias Rangel Wulff",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/agershun/alasql/issues"
+    "url": "https://github.com/AlaSQL/alasql-docs/issues"
   },
-  "homepage": "https://github.com/agershun/alasql#readme",
-  "devDependencies": {
-    "shx": "^0.2.2"
-  }
+  "homepage": "https://github.com/AlaSQL/alasql-docs#readme"
 }

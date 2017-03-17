@@ -26,4 +26,4 @@ pages:
     - 'Introduction': 'index.md'
     - 'Seen fom SQL': 'sql.md'
     - 'Seen from Javasciprt': 'js.md'
-    - 'Keywords': 'keywords.msd'
+    - 'Keywords': 'keywords.md'

@@ -10,15 +10,17 @@ for f in ./docs/wiki/*.md; do (cat "${f}"; echo) >> ./docs/wiki/_.md; done
 
 
 # Move headers to +1 depth
-find ./docs/wiki -name "*.md" -exec sed -i '' 's/^#/##/g' {} ';' 
-
+#find ./docs/wiki -name "*.md" -exec sed -i '' 's/^#/##/g' {} ';' 
+rexreplace '^#' '##' ./docs/wiki/*.md
 
 
 # We dont want relative links or header 1 from the wiki 
 
 # Links formatted like (Nice link)[link]
-find ./docs/wiki -name "*.md" -exec sed -i '' '/)\[http/! s/)\[\([^\]]+\)\]/)\[\/search\.html\?q=\1\]/g' {} ';' # This will ignore all lines with full URL :-(
+#find ./docs/wiki -name "*.md" -exec sed -i '' '/)\[http/! s/)\[\([^\]]+\)\]/)\[\/search\.html\?q=\1\]/g' {} ';' # This will ignore all lines with full URL :-(
+rexreplace '\]\(((?![A-z]+:\/\/).*)\)' '](/search.html?q=$1)' ./docs/wiki/*.md
+
 
 # Links formatted like [[pagename]]
-find ./docs/wiki -name "*.md" -exec sed -i '' 's/\[\[\([^\]]+\)\]\]/(\1)\[\/search\.html\?q=\1\]/g' {} ';'
-
+#find ./docs/wiki -name "*.md" -exec sed -i '' 's/\[\[\([^\]]+\)\]\]/(\1)\[\/search\.html\?q=\1\]/g' {} ';'
+rexreplace '\[\[(.*?)\]\]' '[$1](/search.html?q=$1)' ./docs/wiki/*.md
