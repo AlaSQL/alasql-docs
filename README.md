@@ -2,6 +2,8 @@
 
 # AlaSQL documentation
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/AlaSQL/alasql-docs.svg)](https://greenkeeper.io/)
+
 Lets make the documentation better. 
 
 Just a test site at the moment...'
