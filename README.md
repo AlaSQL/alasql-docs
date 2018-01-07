@@ -1,8 +1,9 @@
 [![Build Status](https://travis-ci.org/AlaSQL/alasql-docs.svg?branch=master)](https://travis-ci.org/AlaSQL/alasql-docs)
+[![Greenkeeper badge](https://badges.greenkeeper.io/AlaSQL/alasql-docs.svg)](https://greenkeeper.io/)
 
 # AlaSQL documentation
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/AlaSQL/alasql-docs.svg)](https://greenkeeper.io/)
+
 
 Lets make the documentation better. 
 
